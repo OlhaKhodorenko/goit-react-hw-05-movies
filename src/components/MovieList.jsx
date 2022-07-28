@@ -10,11 +10,6 @@ const MovieList = ({ movies, prevLocation }) => {
       </li>
     ));
 
-  // const [trendMovies, setTrendMovies] = useState([]);
-  // useEffect(() => {
-  //   getTrending().then(setTrendMovies);
-  // }, []);
-
   return (
     <div>
       <ul>{movies ? addMovies() : null}</ul>
