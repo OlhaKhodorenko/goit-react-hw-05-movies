@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 const Movies = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
   const location = useLocation();
   const searchQuery = new URLSearchParams(location.search).get('query') ?? '';
   const [movies, setMovies] = useState([]);
@@ -32,12 +32,8 @@ const Movies = () => {
       try {
         const foundMovies = await getMovieByQuery(searchQuery);
         if (foundMovies.length === 0) {
-          console.log('There is no images found');
+          console.log('There is no movies found');
         }
-        // const addedMovies = foundMovies.map(({ id, title }) => ({
-        //   id,
-        //   title,
-        // }));
         setMovies([...foundMovies]);
       } catch (error) {
         setError(error);

@@ -5,12 +5,9 @@ import { getTrending } from 'service/api';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-  const [isloading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
-    setIsLoading(true);
     const addMovies = async () => {
       try {
         const Movies = await getTrending();
@@ -23,9 +20,7 @@ const Home = () => {
         }));
         setMovies(addedMovies);
       } catch (error) {
-        setError(error);
-      } finally {
-        setIsLoading(false);
+        console.log(error);
       }
     };
 
