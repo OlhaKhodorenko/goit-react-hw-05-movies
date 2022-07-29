@@ -11,7 +11,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [isloading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [query, setQuery] = useState('');
+  const [query] = useState('');
 
   const handleSubmit = e => {
     error.preventDefault();
@@ -34,10 +34,10 @@ const Movies = () => {
         if (foundMovies.length === 0) {
           console.log('There is no images found');
         }
-        const addedMovies = foundMovies.map(({ id, title }) => ({
-          id,
-          title,
-        }));
+        // const addedMovies = foundMovies.map(({ id, title }) => ({
+        //   id,
+        //   title,
+        // }));
         setMovies([...foundMovies]);
       } catch (error) {
         setError(error);
@@ -48,7 +48,7 @@ const Movies = () => {
     if (searchQuery !== '') {
       searchMovies(searchQuery);
     }
-  }, [searchQuery]);
+  }, [searchQuery, isloading]);
 
   // const visibleMovies = movies.results.filter(movie =>
   //   movie.title.toLowerCase().includes(searchQuery.toLowerCase())
