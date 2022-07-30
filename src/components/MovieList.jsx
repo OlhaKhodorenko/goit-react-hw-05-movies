@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 
-const MovieList = ({ movies, prevLocation }) => {
+const MovieList = ({ movies, location }) => {
   const addMovies = () =>
     movies.map(({ id, title }) => (
       <li key={id}>
-        <NavLink to={`/movies/${id}`} state={{ from: prevLocation }}>
+        <NavLink to={`/movies/${id}`} state={{ from: location }}>
           {title}
         </NavLink>
       </li>

@@ -13,14 +13,6 @@ const Movies = () => {
   const [error, setError] = useState(null);
   const [query] = useState('');
 
-  const handleSubmit = e => {
-    error.preventDefault();
-    if (!query || query.trim() === '') {
-      alert('your query is empty.');
-      return;
-    }
-  };
-
   useEffect(() => {
     if (!searchQuery) {
       return;
@@ -53,7 +45,13 @@ const Movies = () => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
   };
-
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!query || query.trim() === '') {
+      alert('your query is empty.');
+      return;
+    }
+  };
   return (
     <main>
       <SearchBox
@@ -61,7 +59,7 @@ const Movies = () => {
         onChange={updateQueryString}
         onSubmit={handleSubmit}
       />
-      {movies && <MovieList movies={movies} prevLocation={location} />}
+      {movies && <MovieList movies={movies} location={location} />}
     </main>
   );
 };

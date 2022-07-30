@@ -1,11 +1,11 @@
+//import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Movies from '../pages/Movies';
 import { Container, Header, Link } from './App.styled';
 import MoviesDetailes from 'pages/MoviesDetailes';
-//import AdditionalInfo from 'pages/AdditionalInfo';
-import Credits from 'pages/Credits';
-import Review from 'pages/Review';
+import Cast from 'components/Cast';
+import Review from 'components/Review';
 
 export const App = () => {
   return (
@@ -20,7 +20,7 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="movies/:movieId" element={<MoviesDetailes />}>
-          <Route path="credits" element={<Credits />} />
+          <Route path="cast" element={<Cast />} />
           <Route path="review" element={<Review />} />
         </Route>
       </Routes>
