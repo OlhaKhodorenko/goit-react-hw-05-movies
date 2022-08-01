@@ -9,8 +9,7 @@ const Movies = () => {
   const location = useLocation();
   const searchQuery = new URLSearchParams(location.search).get('query') ?? '';
   const [movies, setMovies] = useState([]);
-  //const [isloading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
   const [query] = useState('');
 
   const handleSubmit = e => {
