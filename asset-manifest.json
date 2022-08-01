@@ -1,13 +1,27 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.0d5b2924.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.d3efef73.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.c10111b7.js",
+    "static/js/501.484ef02e.chunk.js": "/goit-react-hw-05-movies/static/js/501.484ef02e.chunk.js",
+    "static/js/415.16edb3e6.chunk.js": "/goit-react-hw-05-movies/static/js/415.16edb3e6.chunk.js",
+    "static/js/297.71289fd1.chunk.js": "/goit-react-hw-05-movies/static/js/297.71289fd1.chunk.js",
+    "static/js/209.f22963e1.chunk.js": "/goit-react-hw-05-movies/static/js/209.f22963e1.chunk.js",
+    "static/js/881.b29db325.chunk.js": "/goit-react-hw-05-movies/static/js/881.b29db325.chunk.js",
+    "static/js/774.d3d9752a.chunk.js": "/goit-react-hw-05-movies/static/js/774.d3d9752a.chunk.js",
+    "static/js/185.df46793e.chunk.js": "/goit-react-hw-05-movies/static/js/185.df46793e.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.0d5b2924.css.map": "/goit-react-hw-05-movies/static/css/main.0d5b2924.css.map",
-    "main.d3efef73.js.map": "/goit-react-hw-05-movies/static/js/main.d3efef73.js.map"
+    "main.c10111b7.js.map": "/goit-react-hw-05-movies/static/js/main.c10111b7.js.map",
+    "501.484ef02e.chunk.js.map": "/goit-react-hw-05-movies/static/js/501.484ef02e.chunk.js.map",
+    "415.16edb3e6.chunk.js.map": "/goit-react-hw-05-movies/static/js/415.16edb3e6.chunk.js.map",
+    "297.71289fd1.chunk.js.map": "/goit-react-hw-05-movies/static/js/297.71289fd1.chunk.js.map",
+    "209.f22963e1.chunk.js.map": "/goit-react-hw-05-movies/static/js/209.f22963e1.chunk.js.map",
+    "881.b29db325.chunk.js.map": "/goit-react-hw-05-movies/static/js/881.b29db325.chunk.js.map",
+    "774.d3d9752a.chunk.js.map": "/goit-react-hw-05-movies/static/js/774.d3d9752a.chunk.js.map",
+    "185.df46793e.chunk.js.map": "/goit-react-hw-05-movies/static/js/185.df46793e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d5b2924.css",
-    "static/js/main.d3efef73.js"
+    "static/js/main.c10111b7.js"
   ]
 }
