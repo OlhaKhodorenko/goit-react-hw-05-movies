@@ -14,8 +14,6 @@ const Reviews = () => {
     return null;
   }
 
-  console.log(movieReview);
-
   return (
     <div>
       {movieReview.length !== 0 ? (

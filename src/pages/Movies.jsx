@@ -9,16 +9,28 @@ const Movies = () => {
   const location = useLocation();
   const searchQuery = new URLSearchParams(location.search).get('query') ?? '';
   const [movies, setMovies] = useState([]);
-  const [isloading, setIsLoading] = useState(false);
+  //const [isloading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [query] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (query.trim() === '') {
+      alert('your query is empty.');
+      return;
+    }
+  };
+  const updateQueryString = query => {
+    const nextParams = query !== '' ? { query } : {};
+    setSearchParams(nextParams);
+  };
 
   useEffect(() => {
     if (!searchQuery) {
       return;
     }
 
-    setIsLoading(true);
+    //setIsLoading(true);
 
     const searchMovies = async ({ title }) => {
       try {
@@ -30,28 +42,18 @@ const Movies = () => {
       } catch (error) {
         setError(error);
       } finally {
-        setIsLoading(false);
+        // setIsLoading(false);
       }
     };
     if (searchQuery !== '') {
       searchMovies(searchQuery);
     }
-  }, [searchQuery, isloading]);
-
+  }, [searchQuery]);
+  //, isloading
   // const visibleMovies = movies.results.filter(movie =>
   //   movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   // );
-  const updateQueryString = query => {
-    const nextParams = query !== '' ? { query } : {};
-    setSearchParams(nextParams);
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (!query || query.trim() === '') {
-      alert('your query is empty.');
-      return;
-    }
-  };
+
   return (
     <main>
       <SearchBox

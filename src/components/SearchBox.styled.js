@@ -9,12 +9,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Input = styled.input`
-  padding: 8px 32px 8px 8px;
+  padding: 4px 52px 4px 4px;
   border-radius: 4px;
+  border: 1px solid #80808085;
   font: inherit;
 `;
 export const Button = styled.button`
-  padding: 8px 32px 8px 8px;
+  padding: 4px;
   border-radius: 4px;
+  border: 1px solid #80808085;
   font: inherit;
 `;

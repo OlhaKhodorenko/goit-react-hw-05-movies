@@ -14,7 +14,25 @@ export const Header = styled.header`
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0000003d;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px;
+
+  .link {
+    font-size: 14pt;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .active {
+    font-size: 14pt;
+    color: inherit;
+    text-decoration: none;
+    text-decoration: underline;
+  }
+
+  .link:not(:last-child) {
+    margin-right: 20px;
+  }
 
   > nav {
     display: flex;
@@ -28,13 +46,13 @@ export const Logo = styled.p`
 
 export const Link = styled(NavLink)`
   padding: 8px 16px;
-  border-radius: 4px;
   text-decoration: none;
   color: black;
   font-weight: 500;
+  font-size: 14pt;
 
   &.active {
-    color: white;
-    background-color: orangered;
+    color: #f1329c;
+    text-decoration: none;
   }
 `;

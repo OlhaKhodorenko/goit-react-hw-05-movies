@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
+import { Link } from './MovieList.styled';
 
 const MovieList = ({ movies, location }) => {
   const addMovies = () =>
     movies.map(({ id, title }) => (
       <li key={id}>
-        <NavLink to={`/movies/${id}`} state={{ from: location }}>
+        <Link to={`/movies/${id}`} state={{ from: location }}>
           {title}
-        </NavLink>
+        </Link>
       </li>
     ));
 
